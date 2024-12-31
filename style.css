@@ -1,0 +1,531 @@
+/* Global CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.global-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100vh;
+}
+
+.global-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 1.Loader */
+.loader {
+    --box: 24px;
+    --offset: 28px;
+    --duration: 3s;
+    --delay: 0.4s;
+    --timing-function: ease-in-out;
+    --in-duration: 0.4s;
+    --in-delay: 0.2s;
+    --in-timing-function: ease-out;
+    width: calc(3 * var(--offset) + var(--box));
+    height: calc(2 * var(--offset) + var(--box));
+    position: relative;
+}
+
+.loader div {
+    display: inline-block;
+    background: rgb(78, 40, 214);
+    border: none;
+    border-radius: 2px;
+    width: var(--box);
+    height: var(--box);
+    position: absolute;
+}
+
+.loader #box1 {
+    left: calc(0 * var(--offset));
+    top: calc(0 * var(--offset));
+    animation: box1 var(--duration) var(--delay) var(--timing-function) infinite,
+        boxfadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loader #box2 {
+    left: calc(0 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: box2 var(--duration) var(--delay) var(--timing-function) infinite,
+        boxfadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loader #box3 {
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: box3 var(--duration) var(--delay) var(--timing-function) infinite,
+        boxfadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loader #box4 {
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: box4 var(--duration) var(--delay) var(--timing-function) infinite,
+        boxfadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loader #box5 {
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: box5 var(--duration) var(--delay) var(--timing-function) infinite,
+        boxfadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+@keyframes box1 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes box2 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+}
+
+@keyframes box3 {
+
+    0%,
+    100% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes box4 {
+    0% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes box5 {
+    0% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes boxfadein {
+    0% {
+        transform: scale(0.75);
+        opacity: 0.0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1.0;
+    }
+}
+
+/* 2.Toggle */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 104px;
+    height: 54px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eef7ff;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    left: 6px;
+    bottom: 7px;
+    z-index: 2;
+    background-color: #2a87f1;
+    transition: .4s;
+}
+
+.sun svg {
+    position: absolute;
+    top: 9px;
+    left: 60px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+}
+
+.moon svg {
+    fill: #e6f4ff;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+}
+
+.sun svg {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.moon svg {
+    animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.input:checked+.slider {
+    background-color: #183153;
+}
+
+.input:focus+.slider {
+    box-shadow: 0 0 1px #183153;
+}
+
+.input:checked+.slider:before {
+    transform: translateX(50px);
+    background-color: #e8e8e8;
+}
+
+/* 3.Social-Card */
+.card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: lightgrey;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 1s ease-in-out;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 107%, #525fe1 0%, #7780e9 40%, #828bec 70%, #2cdab5 100%);
+}
+
+.logo {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    transition: all 0.6s ease-in-out;
+}
+
+.logo .logo-svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.icon .svg {
+    fill: rgba(255, 255, 255, 0.797);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.box {
+    position: absolute;
+    padding: 10px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.389);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-right: 1px solid white;
+    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+    box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+    transform-origin: bottom left;
+    transition: all 1s ease-in-out;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover .svg {
+    fill: white;
+}
+
+.box1 {
+    width: 70%;
+    height: 70%;
+    bottom: -70%;
+    left: -70%;
+}
+
+.box1::before {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 60%, #62c2fe 90%);
+}
+
+.box1:hover::before {
+    opacity: 1;
+}
+
+.box1:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.box2 {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+}
+
+.box2::before {
+    background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00ACEE 90%);
+}
+
+.box2:hover::before {
+    opacity: 1;
+}
+
+.box2:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.box3 {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+}
+
+.box3::before {
+    background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+}
+
+.box3:hover::before {
+    opacity: 1;
+}
+
+.box3:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+}
+
+.box4 {
+    width: 10%;
+    height: 10%;
+    bottom: -10%;
+    left: -10%;
+    transition-delay: 0.6s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .box {
+    bottom: -1px;
+    left: -1px;
+}
+
+.card:hover .logo {
+    transform: translate(0, 0);
+    bottom: 20px;
+    right: 20px;
+}
+
+.card:hover .logo svg {
+    transition-delay: 0.2s;
+    scale: 0.8;
+}
